@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d12">
+  <meta name="description" content="चुनी हुई फ़िल्म की जानकारी।">
+  <title>फ़िल्म की जानकारी — सिनेमा सफ़र</title>
+  <style>
+    :root{color-scheme:dark;--bg:#100d12;--panel:#1b1720;--text:#f7f0e7;--muted:#b8acba;--gold:#f0bd71;--line:rgba(240,189,113,.22)}
+    *{box-sizing:border-box}body{min-height:100vh;margin:0;color:var(--text);background:radial-gradient(ellipse at 85% 5%,rgba(119,60,91,.2),transparent 36rem),var(--bg);font:16px/1.7 system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}
+    a{color:inherit}.shell{width:min(100% - 32px,1020px);margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+    .brand{color:var(--gold);font-weight:850;letter-spacing:.08em;text-decoration:none}.back{color:var(--muted);font-size:14px;text-decoration:none}
+    .instruction{margin:30px 0 24px;padding:clamp(23px,5vw,43px);border:1px solid #f0bd715e;border-radius:22px;background:linear-gradient(135deg,#302435,#19151d);text-align:center}
+    .eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.14em}
+    h1{margin:9px 0;font-size:clamp(34px,6.5vw,59px);line-height:1.22}.instruction p{max-width:690px;margin:9px auto 0;color:var(--muted);font-size:clamp(17px,2.5vw,21px)}
+    .movie-card{display:grid;grid-template-columns:minmax(220px,330px) minmax(0,1fr);align-items:center;gap:clamp(24px,6vw,58px);margin:24px 0;padding:clamp(18px,4vw,34px);border:1px solid #ffffff14;border-radius:22px;background:rgba(27,23,32,.84)}
+    .poster{display:grid;place-items:center;aspect-ratio:.70;overflow:hidden;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#463247,#17131b 72%)}
+    .poster img{width:100%;height:100%;object-fit:cover}.poster-fallback{padding:18px;color:var(--gold);font-size:clamp(24px,4vw,40px);font-weight:850;line-height:1.25;text-align:center}
+    .movie-copy h2{margin:5px 0 12px;font-size:clamp(30px,5vw,49px);line-height:1.2}.movie-copy p{color:var(--muted);font-size:17px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.chip{padding:5px 11px;border:1px solid #f0bd713d;border-radius:999px;color:var(--gold);font-size:13px}
+    .bottom-step{margin:52px 0 42px;padding:30px;border:1px dashed var(--line);border-radius:18px;background:#1b172080;text-align:center}
+    .bottom-step h2{margin:0;color:var(--gold);font-size:clamp(26px,4.5vw,40px)}.bottom-step p{color:var(--muted)}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:8px;padding:10px 18px;border-radius:999px;color:#21170f;background:linear-gradient(110deg,#f4cf8d,#e9a85d);font-weight:800;text-decoration:none}
+    .status{min-height:24px;color:var(--muted);font-size:14px}
+    .error{margin:30px 0;padding:28px;border:1px solid #d9828759;border-radius:18px;background:#4b222b40;text-align:center}.error p{color:var(--muted)}
+    footer{padding:20px 0 34px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}[hidden]{display:none!important}
+    @media(max-width:650px){.topbar{align-items:flex-start;flex-direction:column}.movie-card{grid-template-columns:1fr}.poster{width:min(100%,300px);margin:auto}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="index.html">सिनेमा सफ़र</a><a class="back" href="movies.html">← सभी फ़िल्में</a></header>
+    <main id="movie-content" hidden>
+      <section class="instruction">
+        <div class="eyebrow">फ़िल्म</div>
+        <h1>फ़िल्म पाने के लिए<br>नीचे तक स्क्रॉल करें</h1>
+        <p>नीचे पहुँचते ही अगला पन्ना खुलेगा।</p>
+      </section>
+      <section class="movie-card" aria-label="चुनी हुई फ़िल्म की जानकारी">
+        <div class="poster" id="movie-poster"></div>
+        <div class="movie-copy"><div class="eyebrow">फ़िल्म</div><h2 id="movie-title"></h2><div class="chips" id="movie-chips"></div><p id="movie-overview"></p></div>
+      </section>
+      <section class="bottom-step" id="details-bottom">
+        <p id="bottom-status">अगला पन्ना खुलेगा।</p>
+        <a class="button" id="continue-link" href="#">आगे जाएँ</a>
+      </section>
+    </main>
+    <section class="error" id="error-content" hidden><h1>यह फ़िल्म नहीं मिली</h1><p>सूची पर लौटकर दूसरी फ़िल्म चुनें।</p><a class="button" href="movies.html">फ़िल्मों की सूची खोलें</a></section>
+    <footer>सिनेमा सफ़र</footer>
+  </div>
+  <script src="movies.js"></script>
+  <script>
+    (() => {
+      const movie = window.MovieTools.find(new URLSearchParams(location.search).get("id"));
+      const content = document.getElementById("movie-content");
+      const error = document.getElementById("error-content");
+      if (!movie) { error.hidden = false; return; }
+      content.hidden = false;
+      document.getElementById("movie-title").textContent = movie.title;
+      document.getElementById("movie-overview").textContent = movie.overview || "इस फ़िल्म की जानकारी जल्द जोड़ी जाएगी।";
+
+      const poster = document.getElementById("movie-poster");
+      const posterSource = window.MovieTools.posterSource(movie);
+      if (posterSource) {
+        const img = document.createElement("img");
+        img.src = posterSource;
+        img.alt = movie.title + " पोस्टर";
+        img.onerror = () => { img.remove(); poster.classList.add("poster-fallback"); poster.textContent = movie.title; };
+        poster.append(img);
+      } else {
+        poster.classList.add("poster-fallback");
+        poster.textContent = movie.title;
+      }
+
+      const chips = document.getElementById("movie-chips");
+      [window.MovieTools.dateLabel(movie.releaseDate), movie.language, movie.genre].filter(Boolean).forEach(value => {
+        const chip = document.createElement("span");
+        chip.className = "chip";
+        chip.textContent = value;
+        chips.append(chip);
+      });
+
+      const nextUrl = "movie-wait.html?id=" + encodeURIComponent(movie.id);
+      const continueLink = document.getElementById("continue-link");
+      continueLink.href = nextUrl;
+      const status = document.getElementById("bottom-status");
+      let redirected = false;
+      function goNext() {
+        if (redirected) return;
+        redirected = true;
+        status.textContent = "अगला पन्ना खुल रहा है।";
+        setTimeout(() => location.assign(nextUrl), 350);
+      }
+      const checkBottom = () => {
+        if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) {
+          goNext();
+          removeEventListener("scroll", checkBottom);
+        }
+      };
+      addEventListener("scroll", checkBottom, { passive: true });
+    })();
+  </script>
+</body>
+</html>
