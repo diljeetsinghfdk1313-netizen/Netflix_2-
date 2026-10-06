@@ -550,7 +550,7 @@ window.MOVIE_DATA = [
 
 
 
-/**Newest valid dates first; undated records go last
+Newest valid dates first; undated records go last
 window.MOVIE_DATA.sort((a, b) => {
   const dateA = Date.parse(a.releaseDate);
   const dateB = Date.parse(b.releaseDate);
@@ -559,7 +559,7 @@ window.MOVIE_DATA.sort((a, b) => {
   if (Number.isNaN(dateB)) return -1;
 
   return dateB - dateA;
-});*/
+});
 
 
 
