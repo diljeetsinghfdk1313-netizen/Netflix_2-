@@ -50,7 +50,7 @@ window.MOVIE_DATA = [
     overview: "A romantic comedy about love and relationships.",
     language: "Hindi",
     genre: "Romance, Comedy",
-    telegramUrl: "https://t.me/+X0EgBi7Mi-lmNjZl"
+    telegramUrl: "https://t.me/+H7mFBecJLVE0MTll"
   },
   {
     id: "kis-kisko-pyaar-karoon-2",
@@ -545,470 +545,27 @@ window.MOVIE_DATA = [
     language: "English",
     genre: "Horror, Mystery",
     telegramUrl: "https://t.me/+2ibkgWBl_e02MjY1"
-  },
+  }]
 
-  // Verified additions from the channel list; series and platform entries are excluded.
-  {
-    "id": "awarapan-2",
-    "title": "Awarapan 2",
-    "releaseDate": "2026-08-14",
-    "posterFile": "Awarapan_2.jpg",
-    "overview": "Shivam returns, haunted by grief and loss, searching for a new purpose.",
-    "language": "Hindi",
-    "genre": "Action, Romance, Thriller",
-    "telegramUrl": "https://t.me/+P29_Fr36HMsxNzk1"
-  },
-  {
-    "id": "bol-bhavein-na-bol",
-    "title": "Bol Bhavein Na Bol",
-    "releaseDate": "2026-09-04",
-    "posterFile": "Bol_Bhavein_Na_Bol.jpg",
-    "overview": "A boy and girl meet by chance, and their quiet connection grows into love.",
-    "language": "Punjabi",
-    "genre": "Romance, Drama",
-    "telegramUrl": "https://t.me/+UuEvhqe5G0ZhZDA1"
-  },
-  {
-    "id": "border-2",
-    "title": "Border 2",
-    "releaseDate": "2026-01-23",
-    "posterFile": "Border_2.jpg",
-    "overview": "A Hindi war drama following soldiers defending the country during a major conflict.",
-    "language": "Hindi",
-    "genre": "Action, Drama, War",
-    "telegramUrl": "https://t.me/+XYSI70BUhtI5MDFl"
-  },
-  {
-    "id": "drishyam-3-malayalam",
-    "title": "Drishyam 3",
-    "releaseDate": "2026-05-21",
-    "posterFile": "Drishyam_3.jpg",
-    "overview": "Georgekutty and his family face the continuing consequences of the secrets surrounding them.",
-    "language": "Malayalam",
-    "genre": "Crime, Drama, Thriller",
-    "telegramUrl": "https://t.me/+_OtEshBu1pllNWI9"
-  },
-  {
-    "id": "drishyam-the-conclusion",
-    "title": "Drishyam: The Conclusion",
-    "releaseDate": "2026-10-02",
-    "posterFile": "Drishyam_The_Conclusion.jpg",
-    "overview": "Vijay Salgaonkar again tries to protect his family as a past crime threatens to resurface.",
-    "language": "Hindi",
-    "genre": "Crime, Mystery, Thriller",
-    "telegramUrl": "https://t.me/+D_OuwzLadSVlY2Y1"
-  },
-  {
-    "id": "evil-dead-burn",
-    "title": "Evil Dead Burn",
-    "releaseDate": "2026-07-10",
-    "posterFile": "Evil_Dead_Burn.jpg",
-    "overview": "A family confronts demonic forces in a new chapter of the Evil Dead horror series.",
-    "language": "English",
-    "genre": "Horror, Supernatural",
-    "telegramUrl": "https://t.me/+D9dbXltUh61kYzk1"
-  },
-  {
-    "id": "ikkis",
-    "title": "Ikkis",
-    "releaseDate": "2026-01-01",
-    "posterFile": "Ikkis.jpg",
-    "overview": "A biographical war drama about young Indian soldier Arun Khetarpal.",
-    "language": "Hindi",
-    "genre": "Biography, War, Drama",
-    "telegramUrl": "https://t.me/+p4YgqlLTpkVkOWY1"
-  },
-  {
-    "id": "kankaan-de-ohle",
-    "title": "Kankaan De Ohle",
-    "releaseDate": "2026-07-31",
-    "posterFile": "Kankaan_De_Ohle.jpg",
-    "overview": "A widowed woman’s marriage to an older man challenges social expectations and explores human connection.",
-    "language": "Punjabi",
-    "genre": "Drama",
-    "telegramUrl": "https://t.me/+4i6JlNr4IscyYWY1"
-  },
-  {
-    "id": "mirzapur-the-movie",
-    "title": "Mirzapur: The Movie",
-    "releaseDate": "2026-09-04",
-    "posterFile": "Mirzapur_The_Movie.jpg",
-    "overview": "A big-screen crime story expands the Mirzapur world of power struggles and rivalries.",
-    "language": "Hindi",
-    "genre": "Crime, Action, Thriller",
-    "telegramUrl": "https://t.me/+Fjiij4ctFkhiYmQ9"
-  },
-  {
-    "id": "mitti-de-putt",
-    "title": "Mitti De Putt",
-    "releaseDate": "2026-09-18",
-    "posterFile": "Mitti_De_Putt.jpg",
-    "overview": "A Punjabi action drama about conflict, loyalty and the strength of a community.",
-    "language": "Punjabi",
-    "genre": "Action, Drama",
-    "telegramUrl": "https://t.me/+EC6VsLMZClIyNGE1"
-  },
-  {
-    "id": "mortal-kombat-ii",
-    "title": "Mortal Kombat II",
-    "releaseDate": "2026-05-08",
-    "posterFile": "Mortal_Kombat_II.jpg",
-    "overview": "Earthrealm’s champions face a new tournament and a threat to humanity.",
-    "language": "English",
-    "genre": "Action, Fantasy, Adventure",
-    "telegramUrl": "https://t.me/+NmMPYpgrx2Y3ODI1"
-  },
-  {
-    "id": "pooja-meri-jaan",
-    "title": "Pooja Meri Jaan",
-    "releaseDate": "2026-10-02",
-    "posterFile": "Pooja_Meri_Jaan.jpg",
-    "overview": "A thriller exploring obsession, consent and the legal battle that follows a woman’s ordeal.",
-    "language": "Hindi",
-    "genre": "Thriller, Drama",
-    "telegramUrl": "https://t.me/+aGDDdzbQpS4zOWNl"
-  },
-  {
-    "id": "prahaar-the-untold-story-of-ujjwal-nikam",
-    "title": "Prahaar: The Untold Story of Ujjwal Nikam",
-    "releaseDate": "2026-10-16",
-    "posterFile": "Prahaar_The_Untold_Story_of_Ujjwal_Nikam.jpg",
-    "overview": "A biographical courtroom drama about public prosecutor Ujjwal Nikam.",
-    "language": "Hindi",
-    "genre": "Biography, Courtroom, Drama",
-    "telegramUrl": "https://t.me/+X8OFDLJVOAw5MWZl"
-  },
-  {
-    "id": "prem-keetanu",
-    "title": "Prem Keetanu",
-    "releaseDate": "2026-10-02",
-    "posterFile": "Prem_Keetanu.jpg",
-    "overview": "College friends navigate love, friendship, family expectations and the transition to adulthood.",
-    "language": "Hindi",
-    "genre": "Romance, Comedy, Drama",
-    "telegramUrl": "https://t.me/+8hShyK3SZGNlMjQ1"
-  },
-  {
-    "id": "project-hail-mary",
-    "title": "Project Hail Mary",
-    "releaseDate": "2026-03-20",
-    "posterFile": "Project_Hail_Mary.jpg",
-    "overview": "An astronaut must use science and ingenuity to prevent a threat to life on Earth.",
-    "language": "English",
-    "genre": "Science Fiction, Adventure",
-    "telegramUrl": "https://t.me/+b-yjHlD7oyo5YmJl"
-  },
-  {
-    "id": "saintali",
-    "title": "Saintali",
-    "releaseDate": "",
-    "posterFile": "Saintali.jpg",
-    "overview": "The source lists this title, but its movie identity and release details could not be verified online.",
-    "language": "Unknown",
-    "genre": "Unknown",
-    "telegramUrl": "https://t.me/+rgwMABxFa9YwYWZl"
-  },
-  {
-    "id": "singh-vs-kaur-2",
-    "title": "Singh Vs Kaur 2",
-    "releaseDate": "2026-09-11",
-    "posterFile": "Singh_Vs_Kaur_2.jpg",
-    "overview": "A Punjabi romantic comedy sequel starring Gippy Grewal and Shehnaaz Gill.",
-    "language": "Punjabi",
-    "genre": "Romance, Comedy, Drama",
-    "telegramUrl": "https://t.me/+-5mI7ch0D5ExZDZl"
-  },
-  {
-    "id": "the-mandalorian-and-grogu",
-    "title": "The Mandalorian and Grogu",
-    "releaseDate": "2026-05-22",
-    "posterFile": "The_Mandalorian_and_Grogu.jpg",
-    "overview": "The Mandalorian and Grogu embark on a new Star Wars adventure across the galaxy.",
-    "language": "English",
-    "genre": "Science Fiction, Adventure, Action",
-    "telegramUrl": "https://t.me/+DikbhH4tRfRkMTc1"
-  },
-  {
-    "id": "the-super-mario-galaxy-movie",
-    "title": "The Super Mario Galaxy Movie",
-    "releaseDate": "2026-04-01",
-    "posterFile": "The_Super_Mario_Galaxy_Movie.jpg",
-    "overview": "Mario and friends set off on an animated adventure inspired by the Super Mario Galaxy universe.",
-    "language": "English",
-    "genre": "Animation, Adventure, Comedy",
-    "telegramUrl": "https://t.me/+ZMeIinWW2k1lYTVl"
-  },
-  {
-    "id": "toy-story-5",
-    "title": "Toy Story 5",
-    "releaseDate": "2026-06-19",
-    "posterFile": "Toy_Story_5.jpg",
-    "overview": "Woody, Buzz and the toys face a new challenge as technology changes children’s play.",
-    "language": "English",
-    "genre": "Animation, Adventure, Comedy, Family",
-    "telegramUrl": "https://t.me/+Sxh7iSQrxB43Yzk1"
-  },
-  {
-    "id": "tutt-paini-english-ne",
-    "title": "Tutt Paini English Ne",
-    "releaseDate": "2026-09-25",
-    "posterFile": "Tutt_Paini_English_Ne.jpg",
-    "overview": "Two Punjabi families find themselves divided by ego, education and language.",
-    "language": "Punjabi",
-    "genre": "Comedy, Drama",
-    "telegramUrl": "https://t.me/+lbjAnil8vcg0NTRl"
-  },
-  {
-    "id": "dhurandhar-the-revenge",
-    "title": "Dhurandhar: The Revenge",
-    "releaseDate": "2026-03-19",
-    "posterFile": "Dhurandhar_The_Revenge.jpg",
-    "overview": "An action-crime thriller continuing the story of the Dhurandhar franchise.",
-    "language": "Hindi",
-    "genre": "Action, Crime, Thriller",
-    "telegramUrl": "https://t.me/+PonqwNtR3h82ZDM9"
-  },
-  {
-    "id": "bhooth-bangla",
-    "title": "Bhooth Bangla",
-    "releaseDate": "2026-04-17",
-    "posterFile": "Bhooth_Bangla.jpg",
-    "overview": "A supernatural comedy-horror story set around a mysterious old mansion.",
-    "language": "Hindi",
-    "genre": "Comedy, Horror",
-    "telegramUrl": "https://t.me/+K_WFnJJw1L80OGFl"
-  },
-  {
-    "id": "dhamaal-4",
-    "title": "Dhamaal 4",
-    "releaseDate": "2026-07-10",
-    "posterFile": "Dhamaal_4.jpg",
-    "overview": "A comedy-adventure sequel bringing a chaotic group back together for another misadventure.",
-    "language": "Hindi",
-    "genre": "Comedy, Adventure",
-    "telegramUrl": "https://t.me/+LX9uD_Qw8Bc3ODI1"
-  },
-  {
-    "id": "welcome-to-the-jungle",
-    "title": "Welcome to the Jungle",
-    "releaseDate": "2026-06-26",
-    "posterFile": "Welcome_to_the_Jungle.jpg",
-    "overview": "An ensemble comedy adventure featuring a group caught up in an escalating series of mishaps.",
-    "language": "Hindi",
-    "genre": "Comedy, Action",
-    "telegramUrl": "https://t.me/+3S7MQE8JObZkODVl"
-  },
-  {
-    "id": "cocktail-2",
-    "title": "Cocktail 2",
-    "releaseDate": "2026-06-19",
-    "posterFile": "Cocktail_2.jpg",
-    "overview": "A romantic comedy-drama about relationships, friendship and changing loyalties.",
-    "language": "Hindi",
-    "genre": "Romance, Comedy, Drama",
-    "telegramUrl": "https://t.me/+orZJ5VTzfDdhZmE1"
-  },
-  {
-    "id": "alpha",
-    "title": "Alpha",
-    "releaseDate": "2026-07-03",
-    "posterFile": "Alpha.jpg",
-    "overview": "Two elite agents face a high-stakes mission in the YRF Spy Universe.",
-    "language": "Hindi",
-    "genre": "Action, Spy, Thriller",
-    "telegramUrl": "https://t.me/+EqfTK62swagzZDI1"
-  },
-  {
-    "id": "carry-on-jatta-4",
-    "title": "Carry On Jatta 4",
-    "releaseDate": "2026-06-26",
-    "posterFile": "Carry_On_Jatta_4.jpg",
-    "overview": "A Punjabi comedy sequel built around family relationships and escalating misunderstandings.",
-    "language": "Punjabi",
-    "genre": "Comedy",
-    "telegramUrl": "https://t.me/+8ZkKj8F0-gxlYjg1"
-  },
-  {
-    "id": "ishqnama",
-    "title": "Ishqnama",
-    "releaseDate": "2026-07-24",
-    "posterFile": "Ishqnama.jpg",
-    "overview": "A cross-border love story about Nimma and Nasima, separated by the India–Pakistan border.",
-    "language": "Punjabi",
-    "genre": "Romance, Drama",
-    "telegramUrl": "https://t.me/+DAN749G0OnFhZjI1"
-  },
-  {
-    "id": "dastaar",
-    "title": "Dastaar",
-    "releaseDate": "2026-07-17",
-    "posterFile": "Dastaar.jpg",
-    "overview": "A Sikh immigrant in Britain turns grief after a racist attack into courage and resilience.",
-    "language": "Punjabi",
-    "genre": "Drama",
-    "telegramUrl": "https://t.me/+Cd3M-ojKmnpmMDU1"
-  },
-  {
-    "id": "sarpanch",
-    "title": "Sarpanch",
-    "releaseDate": "2026-07-10",
-    "posterFile": "Sarpanch.jpg",
-    "overview": "Two brothers confront a corrupt village leader and the damage caused by his rule.",
-    "language": "Punjabi",
-    "genre": "Action, Drama",
-    "telegramUrl": "https://t.me/+tr66MDSfx6pkODVl"
-  },
-  {
-    "id": "paige-ishq-puware",
-    "title": "Paige Ishq Puware",
-    "releaseDate": "2026-07-03",
-    "posterFile": "Paige_Ishq_Puware.jpg",
-    "overview": "A Punjabi-language drama; a reliable public synopsis was not available.",
-    "language": "Punjabi",
-    "genre": "Drama",
-    "telegramUrl": "https://t.me/+21Rdde8GmVFhZjNl"
-  },
-  {
-    "id": "chaali-din",
-    "title": "Chaali Din",
-    "releaseDate": "2026-06-19",
-    "posterFile": "Chaali_Din.jpg",
-    "overview": "Kesar’s 40-day journey with a wandering fakir brings spiritual discovery and the pain of first love.",
-    "language": "Punjabi",
-    "genre": "Adventure, Drama",
-    "telegramUrl": "https://t.me/+gGfRkEPH-9ZhMTI1"
-  },
-  {
-    "id": "oye-bhole-oye-2",
-    "title": "Oye Bhole Oye 2",
-    "releaseDate": "2026-06-12",
-    "posterFile": "Oye_Bhole_Oye_2.jpg",
-    "overview": "A village boy refuses to give up his land when a powerful corporation tries to acquire it.",
-    "language": "Punjabi",
-    "genre": "Comedy, Drama",
-    "telegramUrl": "https://t.me/+sES7ioJnItA0ZTA1"
-  },
-  {
-    "id": "chardikala",
-    "title": "Chardikala",
-    "releaseDate": "2026-05-29",
-    "posterFile": "Chardikala.jpg",
-    "overview": "A Punjabi drama centered on perseverance and resilience.",
-    "language": "Punjabi",
-    "genre": "Drama",
-    "telegramUrl": "https://t.me/+HDxeap1xnyc3MTE1"
-  },
-  {
-    "id": "top-cop",
-    "title": "Top Cop",
-    "releaseDate": "2026-05-22",
-    "posterFile": "Top_Cop.jpg",
-    "overview": "A police-focused crime mystery thriller.",
-    "language": "Punjabi, Hindi",
-    "genre": "Crime, Mystery, Thriller",
-    "telegramUrl": "https://t.me/+EInqejThC2JlY2I1"
-  },
-  {
-    "id": "shera",
-    "title": "Shera",
-    "releaseDate": "2026-05-15",
-    "posterFile": "Shera.jpg",
-    "overview": "A young man returns to Punjab seeking peace but is drawn into a violent power struggle.",
-    "language": "Punjabi",
-    "genre": "Action, Drama",
-    "telegramUrl": "https://t.me/+qHcKejnpJEpkNjFl"
-  },
-  {
-    "id": "the-odyssey",
-    "title": "The Odyssey",
-    "releaseDate": "2026-07-17",
-    "posterFile": "The_Odyssey.jpg",
-    "overview": "Odysseus faces a perilous journey home after the Trojan War in Christopher Nolan’s adaptation of the epic.",
-    "language": "English",
-    "genre": "Adventure, Epic, Drama",
-    "telegramUrl": "https://t.me/+pSWfuPcGbr8wYmM1"
-  },
-  {
-    "id": "spider-man-brand-new-day",
-    "title": "Spider-Man: Brand New Day",
-    "releaseDate": "2026-07-31",
-    "posterFile": "Spider-Man_Brand_New_Day.jpg",
-    "overview": "Peter Parker fights crime full-time in a world that has forgotten him, while a new threat emerges.",
-    "language": "English",
-    "genre": "Action, Adventure, Science Fiction",
-    "telegramUrl": "https://t.me/+zCzwPV7CIZNlMmY1"
-  },
-  {
-    "id": "supergirl",
-    "title": "Supergirl",
-    "releaseDate": "2026-06-26",
-    "posterFile": "Supergirl.jpg",
-    "overview": "Kara Zor-El takes center stage in a new DC superhero adventure.",
-    "language": "English",
-    "genre": "Action, Adventure, Science Fiction",
-    "telegramUrl": "https://t.me/+UkC3owRV1EpmZGU1"
-  },
-  {
-    "id": "practical-magic-2",
-    "title": "Practical Magic 2",
-    "releaseDate": "2026-09-10",
-    "posterFile": "Practical_Magic_2.jpg",
-    "overview": "The Owens sisters return as their family’s magical legacy and love curse resurface.",
-    "language": "English",
-    "genre": "Romance, Fantasy, Comedy",
-    "telegramUrl": "https://t.me/+2TQJdb75AYphNWJl"
-  },
-  {
-    "id": "resident-evil-2026",
-    "title": "Resident Evil",
-    "releaseDate": "2026-09-18",
-    "posterFile": "Resident_Evil.jpg",
-    "overview": "A medical courier is caught in a terrifying fight for survival during a sudden outbreak.",
-    "language": "English",
-    "genre": "Horror, Science Fiction, Adventure",
-    "telegramUrl": "https://t.me/+ewnmC7rGjk5iMGI1"
-  },
-  {
-    "id": "the-hunger-games-sunrise-on-the-reaping",
-    "title": "The Hunger Games: Sunrise on the Reaping",
-    "releaseDate": "2026-11-20",
-    "posterFile": "The_Hunger_Games_Sunrise_on_the_Reaping.jpg",
-    "overview": "A prequel set during the 50th Hunger Games, following Haymitch Abernathy.",
-    "language": "English",
-    "genre": "Science Fiction, Action, Drama",
-    "telegramUrl": "https://t.me/+zHkvRNJhLCUzZTE1"
-  },
-  {
-    "id": "zootopia-2",
-    "title": "Zootopia 2",
-    "releaseDate": "2025-11-26",
-    "posterFile": "Zootopia_2.jpg",
-    "overview": "Detectives Judy Hopps and Nick Wilde investigate a mysterious reptile who disrupts Zootopia.",
-    "language": "English",
-    "genre": "Animation, Comedy, Mystery",
-    "telegramUrl": "https://t.me/+7t6pbg62G8thNmI1"
-  },
-  {
-    "id": "moana-live-action",
-    "title": "Moana",
-    "releaseDate": "2026-07-10",
-    "posterFile": "Moana.jpg",
-    "overview": "A live-action reimagining of Moana’s journey across the ocean to save her island.",
-    "language": "English",
-    "genre": "Adventure, Musical, Family",
-    "telegramUrl": "https://t.me/+x6sEI79MOMBhZmU1"
-  },
-  {
-    "id": "clayface",
-    "title": "Clayface",
-    "releaseDate": "2026-10-23",
-    "posterFile": "Clayface.jpg",
-    "overview": "A disfigured actor’s rise and transformation become a body-horror story in Gotham City.",
-    "language": "English",
-    "genre": "Horror, Thriller, Science Fiction",
-    "telegramUrl": "https://t.me/+x5DtCvW4HIw2OWVl"
-  }
-];
+
+
+
+/**Newest valid dates first; undated records go last
+window.MOVIE_DATA.sort((a, b) => {
+  const dateA = Date.parse(a.releaseDate);
+  const dateB = Date.parse(b.releaseDate);
+
+  if (Number.isNaN(dateA)) return 1;
+  if (Number.isNaN(dateB)) return -1;
+
+  return dateB - dateA;
+});*/
+
+
+
+
+
+
 
 window.MovieTools = (() => {
   const movies = Array.isArray(window.MOVIE_DATA) ? window.MOVIE_DATA : [];
@@ -1022,53 +579,17 @@ window.MovieTools = (() => {
     return timestamp;
   }
 
-  function titleKey(value) {
-    return String(value || "")
-      .toLowerCase()
-      .replace(/\b(?:19|20)\d{2}\b/g, "")
-      .normalize("NFKD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9]/g, "");
-  }
-
-  function canonicalKey(movie) {
-    const title = titleKey(movie.title);
-    const date = dateValue(movie.releaseDate);
-    const titleYear = String(movie.title || "").match(/\b(?:19|20)\d{2}\b/);
-    const year = Number.isFinite(date) ? new Date(date).getUTCFullYear() : (titleYear ? titleYear[0] : "");
-    return `${title || String(movie.id || "").toLowerCase()}|${year}`;
-  }
-
-  function sortMoviesInPlace() {
-    const seen = new Set();
-    const uniqueMovies = [];
-    for (const movie of movies) {
-      if (!movie || typeof movie !== "object") continue;
-      const key = canonicalKey(movie);
-      if (seen.has(key)) continue;
-      seen.add(key);
-      uniqueMovies.push(movie);
-    }
-
-    uniqueMovies.sort((a, b) => {
+  function sorted() {
+    return [...movies].sort((a, b) => {
       const aDate = dateValue(a.releaseDate);
       const bDate = dateValue(b.releaseDate);
-      if (Number.isNaN(aDate) && Number.isNaN(bDate)) return 0;
+      if (Number.isNaN(aDate) && Number.isNaN(bDate)) {
+        return String(a.title || "").localeCompare(String(b.title || ""), "hi");
+      }
       if (Number.isNaN(aDate)) return 1;
       if (Number.isNaN(bDate)) return -1;
       return bDate - aDate;
     });
-
-    // Sort the global array before page code reads it to create movie cards.
-    movies.splice(0, movies.length, ...uniqueMovies);
-    return movies;
-  }
-
-  // Run at script load so direct MOVIE_DATA readers also see newest releases first.
-  sortMoviesInPlace();
-
-  function sorted() {
-    return sortMoviesInPlace().slice();
   }
 
   function find(id) {
@@ -1102,5 +623,5 @@ window.MovieTools = (() => {
     }
   }
 
-  return { all: () => sorted(), sorted, find, dateLabel, posterSource, telegramLinkIsValid };
+  return { all: () => [...movies], sorted, find, dateLabel, posterSource, telegramLinkIsValid };
 })();
