@@ -21,10 +21,10 @@
     .loader-progress{stroke:var(--gold);stroke-linecap:round;stroke-dasharray:283;stroke-dashoffset:283;animation:load-progress 6s linear forwards}
     .loader-core{width:8px;height:8px;border-radius:50%;background:var(--gold)}
     .timer-note{margin-bottom:3px;color:var(--muted);font-size:12px}
-    .ads{display:grid;gap:3px;width:min(320px,100%);margin:0 auto}
+    .ads{display:grid;gap:3px;width:min(468px,100%);margin:0 auto}
     .ad-label{margin:1px 0 3px;color:#918895;font-size:10px;line-height:1.2;letter-spacing:.08em;text-transform:uppercase}
-    .ad-slot{display:grid;place-items:center;width:min(320px,100%);height:50px;margin:auto;overflow:hidden;border:1px solid #ffffff14;border-radius:4px;background:#0d0b0f}
-    .ad-slot iframe{max-width:100%;height:50px;border:0}
+    .ad-slot{display:grid;place-items:center;grid-template-columns:minmax(0,1fr);width:100%;min-width:0;min-height:60px;height:auto;margin:auto;overflow-x:auto;overflow-y:visible;border:1px solid #ffffff14;border-radius:4px;background:#0d0b0f}
+    .ad-slot iframe{display:block;width:468px;max-width:none;height:60px;border:0}
     .fallback{display:inline-flex;margin-top:5px;color:var(--muted);font-size:13px;text-decoration:underline;text-underline-offset:3px}
     @keyframes load-progress{to{stroke-dashoffset:0}}
     @media(max-height:620px){header{padding:5px 0}.wait-card{padding:8px 6px}.loader{width:42px;height:42px;margin:3px auto 2px}.timer-note{margin-bottom:2px}.ads{gap:2px}.fallback{margin-top:3px}footer{padding:3px 0}}
