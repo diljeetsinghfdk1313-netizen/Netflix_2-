@@ -48,58 +48,122 @@
       const count = document.getElementById("result-count");
       const movies = window.MovieTools.sorted();
 
+      function posterExists(movie) {
+        return new Promise(resolve => {
+          const source = window.MovieTools.posterSource(movie);
+
+          if (!source) {
+            resolve(false);
+            return;
+          }
+
+          const img = new Image();
+          img.onload = () => resolve(true);
+          img.onerror = () => resolve(false);
+          img.src = source;
+        });
+      }
+
       function makeCard(movie) {
         const card = document.createElement("a");
         card.className = "movie-card";
         card.href = "movie.html?id=" + encodeURIComponent(movie.id);
         card.setAttribute("aria-label", movie.title + " की जानकारी खोलें");
+
         const poster = document.createElement("div");
         poster.className = "poster";
-        const posterSource = window.MovieTools.posterSource(movie);
-        if (posterSource) {
-          const img = document.createElement("img");
-          img.src = posterSource;
-          img.alt = movie.title + " पोस्टर";
-          img.loading = "lazy";
-          img.onerror = () => { img.remove(); poster.classList.add("poster-fallback"); poster.textContent = movie.title; };
-          poster.append(img);
-        } else {
-          poster.classList.add("poster-fallback");
-          poster.textContent = movie.title;
-        }
+
+        const img = document.createElement("img");
+        img.src = window.MovieTools.posterSource(movie);
+        img.alt = movie.title + " पोस्टर";
+        img.loading = "lazy";
+        poster.append(img);
+
         const copy = document.createElement("div");
         copy.className = "card-copy";
+
         const title = document.createElement("h2");
         title.textContent = movie.title;
+
         const date = document.createElement("div");
         date.className = "card-date";
         date.textContent = window.MovieTools.dateLabel(movie.releaseDate);
+
         copy.append(title, date);
         card.append(poster, copy);
+
         return card;
       }
 
-      function render() {
+      async function render() {
         const query = search.value.trim().toLocaleLowerCase("hi");
+
         const matches = movies.filter(movie =>
-          [movie.title, movie.language, movie.genre, movie.overview].join(" ").toLocaleLowerCase("hi").includes(query)
+          [movie.title, movie.language, movie.genre, movie.overview]
+            .join(" ")
+            .toLocaleLowerCase("hi")
+            .includes(query)
         );
+
         grid.replaceChildren();
-        count.textContent = matches.length ? matches.length + " फ़िल्में" : "";
+        count.textContent = "";
+
         if (!matches.length) {
           const empty = document.createElement("div");
           empty.className = "empty";
+
           const title = document.createElement("strong");
-          title.textContent = movies.length ? "फ़िल्म नहीं मिली" : "अभी फ़िल्में नहीं हैं";
+          title.textContent = movies.length
+            ? "फ़िल्म नहीं मिली"
+            : "अभी फ़िल्में नहीं हैं";
+
           const note = document.createElement("span");
           note.textContent = movies.length
             ? "दूसरा नाम खोजें।"
             : "फ़िल्में movies.js में जोड़ें।";
+
           empty.append(title, note);
           grid.append(empty);
           return;
         }
-        matches.forEach(movie => grid.append(makeCard(movie)));
+
+        const checked = await Promise.all(
+          matches.map(async movie => ({
+            movie,
+            exists: await posterExists(movie)
+          }))
+        );
+
+        const moviesWithPosters = checked
+          .filter(item => item.exists)
+          .map(item => item.movie);
+
+        count.textContent = moviesWithPosters.length
+          ? moviesWithPosters.length + " फ़िल्में"
+          : "";
+
+        if (!moviesWithPosters.length) {
+          const empty = document.createElement("div");
+          empty.className = "empty";
+
+          const title = document.createElement("strong");
+          title.textContent = "पोस्टर नहीं मिले";
+
+          const note = document.createElement("span");
+          note.textContent = "इन फ़िल्मों की poster files उपलब्ध नहीं हैं।";
+
+          empty.append(title, note);
+          grid.append(empty);
+          return;
+        }
+
+        const fragment = document.createDocumentFragment();
+
+        moviesWithPosters.forEach(movie => {
+          fragment.append(makeCard(movie));
+        });
+
+        grid.append(fragment);
       }
 
       search.addEventListener("input", render);
