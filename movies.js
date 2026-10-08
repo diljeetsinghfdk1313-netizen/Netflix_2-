@@ -43,6 +43,129 @@ window.MOVIE_DATA = [
 */
 
   {
+  id: "mirzapur-the-movie",
+  title: "Mirzapur: The Movie",
+  releaseDate: "2026-09-04",
+  posterFile: "Mirzapur_The_Movie.jpg",
+  overview: "The battle for Mirzapur's throne escalates as old enemies resurface and new threats emerge.",
+  language: "Hindi",
+  genre: "Action, Crime, Thriller",
+  telegramUrl: "https://t.me/+y166SbwdRkY3MDdl"
+},
+
+{
+  id: "jatt-and-juliet-3",
+  title: "Jatt & Juliet 3",
+  releaseDate: "2024-06-27",
+  posterFile: "Jatt_And_Juliet_3.jpg",
+  overview: "Pooja and Fateh are back as police officers, travelling to London on a case that leads to chaos and comedy.",
+  language: "Punjabi",
+  genre: "Comedy, Romance",
+  telegramUrl: "https://t.me/+ZUEqr_qs7XA2YTE9"
+},
+
+{
+  id: "son-of-sardaar-2",
+  title: "Son of Sardaar 2",
+  releaseDate: "2025-08-01",
+  posterFile: "Son_Of_Sardaar_2.jpg",
+  overview: "Jassi returns to Scotland to win back his estranged wife but becomes involved in a chaotic family and mafia conflict.",
+  language: "Hindi",
+  genre: "Comedy, Action",
+  telegramUrl: "https://t.me/+tLfgoVTQ3xwyZDI1"
+},
+
+{
+  id: "war-2",
+  title: "War 2",
+  releaseDate: "2025-08-14",
+  posterFile: "War_2.jpg",
+  overview: "Kabir returns for another high-stakes mission as the action expands into a dangerous international conflict.",
+  language: "Hindi",
+  genre: "Action, Thriller, Spy",
+  telegramUrl: "https://t.me/+Zir5U6-NPhM2YmQ1"
+},
+
+{
+  id: "warning-2",
+  title: "Warning 2",
+  releaseDate: "2024-03-07",
+  posterFile: "Warning_2.jpg",
+  overview: "Geja's attempt to finish his old rivalry with Pamma brings both men into a dangerous prison conflict.",
+  language: "Punjabi",
+  genre: "Action, Crime, Thriller",
+  telegramUrl: "https://t.me/+heFQ7sw9hwoyYjE9"
+},
+
+{
+  id: "the-bengal-files",
+  title: "The Bengal Files",
+  releaseDate: "2025-09-05",
+  posterFile: "The_Bengal_Files.jpg",
+  overview: "A historical drama exploring a dark and turbulent chapter surrounding Bengal and the events of India's partition era.",
+  language: "Hindi",
+  genre: "Historical, Drama",
+  telegramUrl: "https://t.me/+lvRC2m16iNJjZjY1"
+},
+
+{
+  id: "housefull-5",
+  title: "Housefull 5",
+  releaseDate: "2025-06-06",
+  posterFile: "Housefull_5.jpg",
+  overview: "A murder mystery turns into a chaotic comedy when a group of eccentric characters find themselves trapped together.",
+  language: "Hindi",
+  genre: "Comedy",
+  telegramUrl: "https://t.me/+NvDuzBdmMw5lMjk9"
+},
+
+{
+  id: "kudi-haryane-val-di",
+  title: "Kudi Haryane Val Di",
+  releaseDate: "2024-06-14",
+  posterFile: "Kudi_Haryane_Val_Di.jpg",
+  overview: "A Punjabi-Haryanvi romantic comedy about a couple whose different backgrounds create hilarious complications.",
+  language: "Punjabi",
+  genre: "Comedy, Romance",
+  telegramUrl: "https://t.me/+EBnSpxTp95hjNDJl"
+},
+
+{
+  id: "shinda-shinda-no-papa",
+  title: "Shinda Shinda No Papa",
+  releaseDate: "2024-05-10",
+  posterFile: "Shinda_Shinda_No_Papa.jpg",
+  overview: "A father creates an unusual plan to discipline his mischievous son, leading to a series of funny family situations.",
+  language: "Punjabi",
+  genre: "Comedy, Family",
+  telegramUrl: "https://t.me/+45lWsDgtW-c0MGY1"
+},
+
+{
+  id: "sky-force",
+  title: "Sky Force",
+  releaseDate: "2025-01-24",
+  posterFile: "Sky_Force.jpg",
+  overview: "Indian Air Force officers undertake a dangerous mission during a major conflict while confronting courage, sacrifice and duty.",
+  language: "Hindi",
+  genre: "Action, War, Drama",
+  telegramUrl: "https://t.me/+x10irL5T5LE4ZmE1"
+},
+
+{
+  id: "border-2",
+  title: "Border 2",
+  releaseDate: "2026-01-23",
+  posterFile: "Border_2.jpg",
+  overview: "During the 1971 Indo-Pak war, a new generation of Indian warriors prepares to defend the nation against a major threat.",
+  language: "Hindi",
+  genre: "Action, War, Drama",
+  telegramUrl: "https://t.me/+G2-DjRFczGZjMDg1"
+},
+
+  
+
+  {
     id: "drishyam-the-conclusion",
     title: "Drishyam: The Conclusion",
     releaseDate: "2026-10-20",
