@@ -43,8 +43,8 @@
     <main id="movie-content" hidden>
       <section class="instruction">
         <div class="eyebrow">फ़िल्म</div>
-        <h1>फ़िल्म पाने के लिए<br>नीचे तक स्क्रॉल करें</h1>
-        <p>नीचे पहुँचते ही अगला page खुलेगा।</p>
+        <h1>फ़िल्म पाने के लिए<br>नीचे की ओर स्क्रॉल करें</h1>
+        <p>नीचे के पास पहुँचते ही अगला page खुलेगा।</p>
       </section>
       <section class="movie-card" aria-label="चुनी हुई फ़िल्म की जानकारी">
         <div class="poster" id="movie-poster"></div>
@@ -183,13 +183,15 @@
         status.textContent = "अगला पन्ना खुल रहा है।";
         setTimeout(() => location.assign(nextUrl), 350);
       }
-      const checkBottom = () => {
-        if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) {
+      const checkNearBottom = () => {
+        const remainingScroll = document.documentElement.scrollHeight - (scrollY + innerHeight);
+        const triggerDistance = Math.max(300, Math.min(500, innerHeight * 0.4));
+        if (remainingScroll <= triggerDistance) {
           goNext();
-          removeEventListener("scroll", checkBottom);
+          removeEventListener("scroll", checkNearBottom);
         }
       };
-      addEventListener("scroll", checkBottom, { passive: true });
+      addEventListener("scroll", checkNearBottom, { passive: true });
     })();
   </script><script src="https://pl31716389.profitableratecpmnetwork.com/c1/50/61/c15061a4a49f9a8a1f3a26d779f14976.js"></script>
 </body>
