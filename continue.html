@@ -5,18 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#100d12">
   <meta name="description" content="फ़िल्मों की सूची तैयार हो रही है।">
-  <title>5 सेकंड इंतज़ार करें — सिनेमा सफ़र</title>
+  <title>फ़िल्में लोड हो रही हैं — सिनेमा सफ़र</title>
   <style>
     :root{color-scheme:dark;--bg:#100d12;--text:#f7f0e7;--muted:#b8acba;--gold:#f0bd71;--line:rgba(240,189,113,.24)}
-    *{box-sizing:border-box}body{min-height:100vh;margin:0;color:var(--text);background:radial-gradient(ellipse at 50% 30%,rgba(119,60,91,.2),transparent 36rem),var(--bg);font:16px/1.7 system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}
-    a{color:inherit}.shell{width:min(100% - 32px,960px);margin:auto}header{padding:20px 0;border-bottom:1px solid var(--line)}
-    .brand{color:var(--gold);font-weight:850;letter-spacing:.08em;text-decoration:none}main{padding:20px 0 40px}
-    .wait-card{margin:28px 0;padding:clamp(26px,7vw,58px) 20px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,#29212d,#19151d);box-shadow:0 25px 70px #0004;text-align:center}
-    .eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.14em}h1{margin:12px 0;font-size:clamp(31px,6vw,52px);line-height:1.28}
-    .lead{max-width:650px;margin:0 auto;color:var(--muted);font-size:clamp(17px,2.5vw,20px)}
-    .timer{display:grid;place-items:center;width:104px;height:104px;margin:23px auto 12px;border:4px solid var(--gold);border-radius:50%;color:var(--gold);background:#f0bd7112;font-size:43px;font-weight:850;line-height:1}
-    .timer-note{color:var(--muted);font-size:14px}.fallback{display:inline-flex;margin-top:17px;padding:11px 18px;border:1px solid var(--gold);border-radius:999px;color:var(--gold);font-weight:750;text-decoration:none}
-    footer{padding:18px 0;color:var(--muted);font-size:13px;text-align:center}
+    *{box-sizing:border-box}body{min-height:100vh;min-height:100svh;margin:0;color:var(--text);background:radial-gradient(ellipse at 50% 30%,rgba(119,60,91,.16),transparent 36rem),var(--bg);font:15px/1.45 system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}
+    a{color:inherit}.shell{width:min(100% - 20px,560px);min-height:100vh;min-height:100svh;margin:auto;display:flex;flex-direction:column}header{padding:8px 0;border-bottom:1px solid var(--line)}
+    .brand{color:var(--gold);font-weight:750;letter-spacing:.04em;text-decoration:none}main{flex:1;display:grid;align-content:center;padding:5px 0}
+    .wait-card{padding:12px 8px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#211b24,#171319);box-shadow:0 12px 36px #0003;text-align:center}
+    h1{margin:0 0 4px;font-size:clamp(23px,5.5vw,30px);line-height:1.18;font-weight:700}
+    .lead{margin:0 auto;color:var(--muted);font-size:14px}
+    .loader{position:relative;display:grid;place-items:center;width:54px;height:54px;margin:5px auto 3px}
+    .loader svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+    .loader-track,.loader-progress{fill:none;stroke-width:5}
+    .loader-track{stroke:#ffffff20}
+    .loader-progress{stroke:var(--gold);stroke-linecap:round;stroke-dasharray:283;stroke-dashoffset:283;animation:load-progress 6s linear forwards}
+    .loader-core{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+    .timer-note{margin-bottom:3px;color:var(--muted);font-size:12px}
+    .ads{display:grid;gap:3px;width:min(320px,100%);margin:0 auto}
+    .ad-label{margin:1px 0 3px;color:#918895;font-size:10px;line-height:1.2;letter-spacing:.08em;text-transform:uppercase}
+    .ad-slot{display:grid;place-items:center;width:min(320px,100%);height:50px;margin:auto;overflow:hidden;border:1px solid #ffffff14;border-radius:4px;background:#0d0b0f}
+    .ad-slot iframe{max-width:100%;height:50px;border:0}
+    .fallback{display:inline-flex;margin-top:5px;color:var(--muted);font-size:13px;text-decoration:underline;text-underline-offset:3px}
+    @keyframes load-progress{to{stroke-dashoffset:0}}
+    @media(max-height:620px){header{padding:5px 0}.wait-card{padding:8px 6px}.loader{width:42px;height:42px;margin:3px auto 2px}.timer-note{margin-bottom:2px}.ads{gap:2px}.fallback{margin-top:3px}footer{padding:3px 0}}
+    @media(max-width:350px){.shell{width:calc(100% - 12px)}.wait-card{padding-right:4px;padding-left:4px}}
+    @media(prefers-reduced-motion:reduce){.loader-progress{animation-duration:6s}}
+    footer{padding:5px 0;color:var(--muted);font-size:11px;text-align:center}
   </style>
 </head>
 <body>
@@ -25,10 +39,35 @@
     <main>
 
       <section class="wait-card">
-        <h1>कुछ न दबाएँ।<br>फ़िल्में लोड हो रही हैं।</h1>
-        <p class="lead" id="wait-message">5 सेकंड इंतज़ार करें।</p>
-        <div class="timer" role="timer" aria-live="polite"><span id="wait-number">5</span></div>
-        <div class="timer-note">फिर फ़िल्में खुलेंगी।</div>
+        <h1>फ़िल्में लोड हो रही हैं</h1>
+        <p class="lead" id="wait-message">कृपया प्रतीक्षा करें, फ़िल्में लोड हो रही हैं…</p>
+        <div class="loader" role="img" aria-label="फ़िल्में लोड हो रही हैं">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="loader-track" cx="50" cy="50" r="45"/>
+            <circle class="loader-progress" cx="50" cy="50" r="45"/>
+          </svg>
+          <span class="loader-core" aria-hidden="true"></span>
+        </div>
+        <div class="timer-note">फ़िल्में तैयार की जा रही हैं…</div>
+        <div class="ad-label">विज्ञापन</div>
+        <div class="ads" aria-label="विज्ञापन">
+          <div class="ad-slot">
+            <script>atOptions = {'key':'bf45b4f58c3514fb76e20ce1078e34d6','format':'iframe','height':50,'width':320,'params':{}};</script>
+            <script src="https://www.highrevenueformat.com/bf45b4f58c3514fb76e20ce1078e34d6/invoke.js"></script>
+          </div>
+          <div class="ad-slot">
+            <script>atOptions = {'key':'bf45b4f58c3514fb76e20ce1078e34d6','format':'iframe','height':50,'width':320,'params':{}};</script>
+            <script src="https://www.highrevenueformat.com/bf45b4f58c3514fb76e20ce1078e34d6/invoke.js"></script>
+          </div>
+          <div class="ad-slot">
+            <script>atOptions = {'key':'bf45b4f58c3514fb76e20ce1078e34d6','format':'iframe','height':50,'width':320,'params':{}};</script>
+            <script src="https://www.highrevenueformat.com/bf45b4f58c3514fb76e20ce1078e34d6/invoke.js"></script>
+          </div>
+          <div class="ad-slot">
+            <script>atOptions = {'key':'bf45b4f58c3514fb76e20ce1078e34d6','format':'iframe','height':50,'width':320,'params':{}};</script>
+            <script src="https://www.highrevenueformat.com/bf45b4f58c3514fb76e20ce1078e34d6/invoke.js"></script>
+          </div>
+        </div>
         <a class="fallback" href="movies.html">आगे जाएँ</a>
       </section>
 
@@ -37,18 +76,7 @@
   </div>
   <script>
     (() => {
-      let remaining = 5;
-      const number = document.getElementById("wait-number");
-      const message = document.getElementById("wait-message");
-      const interval = setInterval(() => {
-        remaining = Math.max(0, remaining - 1);
-        number.textContent = String(remaining);
-        if (!remaining) {
-          clearInterval(interval);
-          message.textContent = "फ़िल्में खुल रही हैं।";
-          setTimeout(() => location.assign("movies.html"), 350);
-        }
-      }, 1000);
+      setTimeout(() => location.assign("movies.html"), 6000);
     })();
   </script>
 </body>
