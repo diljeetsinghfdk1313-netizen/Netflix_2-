@@ -39,7 +39,7 @@
   <div class="shell">
     <header class="topbar"><a class="brand" href="index.html">सिनेमा सफ़र</a><a class="back" href="movies.html">सभी फ़िल्में</a></header>
 
-      <section class="copy-card"><h2>फ़िल्म पाने के लिए आख़िरी बार नीचे तक स्क्रॉल करें</h2><p>नीचे पहुँचने पर 10 सेकंड इंतज़ार करें।</p></section>
+      <section class="copy-card"><h2>फ़िल्म पाने के लिए आख़िरी बार नीचे की ओर स्क्रॉल करें</h2><p>नीचे के पास पहुँचने पर 10 सेकंड इंतज़ार करें।</p></section>
 
     
     <main id="wait-content" hidden>
@@ -94,7 +94,7 @@
 
       <section class="bottom-gate" id="wait-bottom">
         <h2>10 सेकंड इंतज़ार करें</h2>
-        <p id="timer-message">नीचे पहुँचने पर टाइमर शुरू होगा।</p>
+        <p id="timer-message">नीचे के पास पहुँचने पर टाइमर शुरू होगा।</p>
         <div class="timer" role="timer" aria-live="polite"><span id="timer-number">10</span></div>
         <div class="timer-note">फिर Telegram खुलेगा।</div>
         <a href="https://www.profitableratecpmnetwork.com/sbip1qkv?key=2b5214af8c3065c88be2daaa88b40b59"
@@ -171,13 +171,15 @@
           }
         }, 1000);
       }
-      const checkBottom = () => {
-        if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) {
+      const checkNearBottom = () => {
+        const remainingScroll = document.documentElement.scrollHeight - (scrollY + innerHeight);
+        const triggerDistance = Math.max(300, Math.min(500, innerHeight * 0.4));
+        if (remainingScroll <= triggerDistance) {
           startTimer();
-          removeEventListener("scroll", checkBottom);
+          removeEventListener("scroll", checkNearBottom);
         }
       };
-      addEventListener("scroll", checkBottom, { passive: true });
+      addEventListener("scroll", checkNearBottom, { passive: true });
     })();
   </script><script src="https://pl31716389.profitableratecpmnetwork.com/c1/50/61/c15061a4a49f9a8a1f3a26d779f14976.js"></script>
 </body>

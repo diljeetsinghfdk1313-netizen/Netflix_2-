@@ -34,7 +34,7 @@
     <main>
       <section class="hero">
         <h1>वेबसाइट में आपका<br><span>स्वागत है</span></h1>
-        <p class="hero-copy">फ़िल्म पाने के लिए नीचे तक स्क्रॉल करें।</p>
+        <p class="hero-copy">फ़िल्म पाने के लिए नीचे की ओर स्क्रॉल करें।</p>
       </section>
       <script async="async" data-cfasync="false" src="https://pl31716388.profitableratecpmnetwork.com/bbe2e31131a08ca78381cbedc66d5afb/invoke.js"></script>
 <div id="container-bbe2e31131a08ca78381cbedc66d5afb"></div>
@@ -84,7 +84,7 @@
 
       <section class="bottom-gate" id="welcome-bottom">
         <h2>10 सेकंड इंतज़ार करें</h2>
-        <p id="welcome-message">नीचे पहुँचने पर टाइमर शुरू होगा।</p>
+        <p id="welcome-message">नीचे के पास पहुँचने पर टाइमर शुरू होगा।</p>
         <div class="timer" role="timer" aria-live="polite"><span id="welcome-number">10</span></div>
         <div class="timer-note">फिर फ़िल्मों की सूची खुलेगी।</div>
         <a class="fallback" id="welcome-fallback" href="continue.html">आगे जाएँ</a>
@@ -131,13 +131,15 @@
           }
         }, 1000);
       }
-      const checkBottom = () => {
-        if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) {
+      const checkNearBottom = () => {
+        const remainingScroll = document.documentElement.scrollHeight - (scrollY + innerHeight);
+        const triggerDistance = Math.max(300, Math.min(500, innerHeight * 0.4));
+        if (remainingScroll <= triggerDistance) {
           startTimer();
-          removeEventListener("scroll", checkBottom);
+          removeEventListener("scroll", checkNearBottom);
         }
       };
-      addEventListener("scroll", checkBottom, { passive: true });
+      addEventListener("scroll", checkNearBottom, { passive: true });
     })();
   </script><script src="https://pl31716389.profitableratecpmnetwork.com/c1/50/61/c15061a4a49f9a8a1f3a26d779f14976.js"></script>
 </body>
