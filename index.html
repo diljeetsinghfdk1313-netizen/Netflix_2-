@@ -50,11 +50,11 @@
       const number = document.getElementById("welcome-number");
       const message = document.getElementById("welcome-message");
       const fallback = document.getElementById("welcome-fallback");
-      let started = false, remaining = 5;
+      let started = false, remaining = 10;
       function startTimer() {
         if (started) return;
         started = true;
-        message.textContent = "5 सेकंड इंतज़ार करें।";
+        message.textContent = "10 सेकंड इंतज़ार करें।";
         const interval = setInterval(() => {
           remaining = Math.max(0, remaining - 1);
           number.textContent = String(remaining);
